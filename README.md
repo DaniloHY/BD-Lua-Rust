@@ -5,10 +5,6 @@ escritas em Lua.
 
 ## Integrantes
 
-> **Preencher antes da entrega** com o nome completo de todos os
-> integrantes do grupo — quem não estiver listado aqui não recebe nota por
-> este trabalho, mesmo que apareça no histórico de commits.
-
 - Danilo Hideo Yamamoto
 - Kauê de Sousa Ibiapino
 
