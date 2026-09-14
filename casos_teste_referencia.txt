@@ -1,0 +1,33 @@
+ADD origem valor_original      -> OK
+GET origem                     -> valor_original
+
+ADD ref_a origem                -> OK
+GET ref_a                       -> valor_original
+
+# origem muda de valor; a referencia deve refletir o valor ATUAL, nao uma
+# copia tirada no momento do ADD
+ADD origem valor_novo           -> OK
+GET ref_a                       -> valor_novo
+
+# referencia para chave que nao existe
+ADD ref_b nao_existe            -> ERRO (chave referenciada nao existe)
+
+# auto-referencia nao e permitida
+ADD ref_c ref_c                 -> ERRO (referencia para a propria chave)
+
+# valor vazio
+ADD ref_d                       -> ERRO (valor vazio)
+
+# referencia para uma chave que e ela mesma uma referencia: soh um nivel de
+# dereferenciacao, nao segue a cadeia. ref_a guarda literalmente "origem"
+# como valor bruto, entao ref_e aponta pra ela e le esse texto bruto.
+ADD ref_e ref_a                 -> OK
+GET ref_e                       -> origem
+
+# sobrescrever uma referencia para apontar outra chave e permitido
+ADD outra_coisa 123             -> OK
+ADD ref_a outra_coisa           -> OK
+GET ref_a                       -> 123
+
+# chave sem prefixo, nao afetada
+GET origem                      -> valor_novo

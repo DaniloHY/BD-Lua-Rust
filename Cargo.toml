@@ -1,0 +1,16 @@
+[package]
+name = "banco-memoria"
+version = "0.1.0"
+edition = "2021"
+description = "Banco de dados chave-valor em memória (Rust) com sistema de extensões em Lua"
+
+[[bin]]
+name = "banco-memoria"
+path = "src/main.rs"
+
+[dependencies]
+# mlua é o único crate externo do projeto: é o objeto do trabalho (embarcar a
+# VM do Lua), e a feature "vendored" compila o Lua 5.4 junto do projeto, sem
+# exigir que a máquina de destino já tenha Lua instalado — só um compilador C
+# (gcc/clang), que normalmente já vem com o toolchain de build do Rust.
+mlua = { version = "0.9", features = ["lua54", "vendored"] }
