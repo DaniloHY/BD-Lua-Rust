@@ -9,9 +9,9 @@ escritas em Lua.
 > integrantes do grupo — quem não estiver listado aqui não recebe nota por
 > este trabalho, mesmo que apareça no histórico de commits.
 
-- [Nome completo do integrante 1]
-- [Nome completo do integrante 2]
-- [Nome completo do integrante 3]
+- Danilo Hideo Yamamoto
+- Kauê de Sousa Ibiapino
+
 
 ---
 
