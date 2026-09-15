@@ -9,7 +9,7 @@
 #
 # "ERRO" significa que a operacao deve falhar reportando o motivo, e nao
 # derrubar o processo nem gravar o valor no banco.
-
+#
 # ---------------------------------------------------------------------------
 # Extensao CPF - entrada aceita apenas os 11 digitos, sem formatacao
 # ---------------------------------------------------------------------------

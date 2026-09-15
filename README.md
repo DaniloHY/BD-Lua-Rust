@@ -1,7 +1,6 @@
 # banco-memoria
 
-Banco de dados chave-valor em memória, em Rust, com um sistema de extensões
-escritas em Lua.
+Banco de dados chave-valor em memória, em Rust, com um sistema de extensões escritas em Lua.
 
 ## Integrantes
 
